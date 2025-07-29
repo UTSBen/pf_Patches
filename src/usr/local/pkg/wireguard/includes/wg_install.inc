@@ -160,7 +160,7 @@ function wg_defaults_install() {
 
 	$wgg['config']['hide_peers'] 			= isset($wgg['config']['hide_peers']) ? $wgg['config']['hide_peers'] : 'yes';
 	
-	wg_write_config('Applied package default settings as necessary.', false);
+	wg_write_config('Applied package default settings as necessary.', false, false);
 }
 
 function wg_service_rcfile() {
@@ -265,7 +265,7 @@ function wg_earlyshellcmd_install() {
 		}
 	}
 
-	wg_write_config('Installed earlyshellcmd(s).', false);
+	wg_write_config('Installed earlyshellcmd(s).', false, false);
 }
 
 /*
@@ -305,7 +305,7 @@ function wg_earlyshellcmd_deinstall() {
 		}
 	}
 
-	wg_write_config('De-installed earlyshellcmd(s).', false);
+	wg_write_config('De-installed earlyshellcmd(s).', false, false);
 }
 
 /*
@@ -335,7 +335,7 @@ function wg_ifgroup_install() {
 		array_unshift($a_ifgroups, $wgg['ifgroupentry']);
 	}
 
-	wg_write_config("Installed interface group ({$wgg['ifgroupentry']['ifname']}).", false);
+	wg_write_config("Installed interface group ({$wgg['ifgroupentry']['ifname']}).", false, false);
 }
 
 /*
@@ -358,7 +358,7 @@ function wg_ifgroup_deinstall() {
 		}
 	}
 
-	wg_write_config("De-installed interface group ({$wgg['ifgroupentry']['ifname']}).", false);
+	wg_write_config("De-installed interface group ({$wgg['ifgroupentry']['ifname']}).", false, false);
 }
 
 /*
@@ -381,7 +381,7 @@ function wg_unbound_acl_deinstall() {
 		}
 	}
 
-	wg_write_config("De-installed Unbound ACL group ({$wgg['unboundaclentry']['aclname']}).", false);
+	wg_write_config("De-installed Unbound ACL group ({$wgg['unboundaclentry']['aclname']}).", false, false);
 }
 
 /*
@@ -427,7 +427,7 @@ function wg_unbound_acl_install() {
 		}
 	}
 
-	wg_write_config("Installed Unbound ACL group ({$wgg['unboundaclentry']['aclname']}).", false);
+	wg_write_config("Installed Unbound ACL group ({$wgg['unboundaclentry']['aclname']}).", false, false);
 }
 
 ?>
